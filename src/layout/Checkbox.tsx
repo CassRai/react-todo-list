@@ -10,11 +10,11 @@ JSX = html within javascript
 
 */
 
-export default function Checkbox({name, value, done}:{name:string, value?:string, done?:boolean}){
+export default function Checkbox({name, value}:{name:string, value?:string}){
     const IdValue = `checkbox-${value ?? name}`;
 
     return [ 
-        <input type="checkbox" id={IdValue} name={name} value={value} checked={!!done}/>,
+        <input type="checkbox" id={IdValue} name={name} value={value}/>,
         <label htmlFor={IdValue}>{name}</label>
     ]
 }

@@ -9,4 +9,5 @@ export const my_list:ToDoListItem[] = [
     {name:"Wash dishes"},
     {name: "Feed cat"},
     {name:"Homework"},
-    {name: "Make dinner"}]
+    {name: "Make dinner"},
+    {name: "Join gym"}]
