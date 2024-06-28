@@ -18,12 +18,10 @@ function App() {
     // <> </> = fragment - an array alternative 
     <> 
     <Header />
-    <div id="checkboxList">
-    <form action="">
+    <form id="checkboxList" action="">
       {/** {} within here to show an object and that its not html */}
-      {my_list.map(({name, value}) => ( <div> <Checkbox key={name+value} name={name} value={value!}/> </div>)) }
-    </form>
-    </div> 
+      {my_list.map(({name, value}) => ( <div id="indivCheckbox"> <Checkbox key={name+value} name={name} value={value!}/> </div>)) }
+    </form> 
     <Footer /> 
     </>
   );

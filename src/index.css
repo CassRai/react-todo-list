@@ -71,6 +71,11 @@ footer {
   color: aliceblue;
   background-color: #747bff;
   font-style: italic;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4em;
   
 }
 

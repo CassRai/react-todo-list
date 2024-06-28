@@ -14,7 +14,8 @@ export default function Checkbox({name, value}:{name:string, value?:string}){
     const IdValue = `checkbox-${value ?? name}`;
 
     return [ 
-        <input type="checkbox" id={IdValue} name={name} value={value}/>,
+        <input type="checkbox" id={IdValue} name={name} value={value}/>, 
+        "   ",
         <label htmlFor={IdValue}>{name}</label>
     ]
 }
