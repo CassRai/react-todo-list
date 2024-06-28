@@ -19,7 +19,7 @@ function App() {
     <> 
     <Header />
     <EnterField />
-    <Button />
+    <div id="button_section"><Button /></div>
 
     <form id="checkboxList" action="">
       {/** {} within here to show an object and that its not html */}
