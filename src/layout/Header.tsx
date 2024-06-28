@@ -1,5 +1,3 @@
-//JSX = html within javascript
-
 export default function Header(){
     return <header>
         <h1>To Do List</h1>
