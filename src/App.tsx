@@ -17,7 +17,7 @@ function App() {
   return (
     // <> </> = fragment - an array alternative 
     <> 
-    <Header /> 
+    <Header /> Hello again
     <form action="">
       {/** {} within here to show an object and that its not html */}
       {my_list.map(({name, value, done}) => (<Checkbox key={name+value} name={name} value={value!} done={done} />)) }
