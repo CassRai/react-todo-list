@@ -11,3 +11,5 @@ export const my_list:ToDoListItem[] = [
     {name:"Homework"},
     {name: "Make dinner"},
     {name: "Join gym"}]
+
+export const new_list:ToDoListItem[] = []
