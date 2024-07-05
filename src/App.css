@@ -49,5 +49,9 @@
 }
 
 #indivCheckbox {
-  padding: 0.6em;
+  padding: 0.4em;
+}
+
+.strikeThroughCheckbox {
+  text-decoration: line-through;
 }

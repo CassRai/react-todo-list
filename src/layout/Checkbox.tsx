@@ -22,11 +22,22 @@ export default function Checkbox({name, value}:{name:string, value?:string}){
         else isChecked = false set it to True
         */
         setIsChecked(!isChecked)
+
+        
       }
 
     return [ 
-        <input type="checkbox" id={IdValue} name={name} value={value} checked={isChecked} onChange={checkHandler}/>, 
+        <input 
+            type="checkbox"
+            id={IdValue}
+            name={name} 
+            value={value}
+            checked={isChecked}
+            onChange={checkHandler}
+        />, 
         "   ",
-        <label htmlFor={IdValue}>{name}</label>
+        <label htmlFor={IdValue}
+            className= {`${isChecked===true ? 'strikeThroughCheckbox' : ''}`}
+        >{name}</label>
     ]
 }

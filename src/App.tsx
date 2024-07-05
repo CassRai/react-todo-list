@@ -17,6 +17,7 @@ export default function App() {
     setparentState(newState);
     console.log(newState);
     new_list.push({name:newState})
+
   }
 
   /*useEffect(() => {
