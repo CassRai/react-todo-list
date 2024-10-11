@@ -1,51 +1,47 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Header from './layout/Header';
 import Checkbox from './layout/Checkbox';
-// import { my_list } from './data/to-do-list'
 import Footer from './layout/Footer';
 import EnterForm from './layout/EnterForm';
 import { ToDoListItem } from './data/to-do-list';
 import { new_list } from './data/to-do-list';
-// import { submitForm } from './layout/EnterForm';
-import  './App.css'
-
+import './App.css';
 
 export default function App() {
-  const [parentState, setparentState] = useState<string>('');
+  const [parentState, setParentState] = useState<string>('');
 
-  const handleInput = (newState: string) =>{
-    setparentState(newState);
+  const handleInput = (newState: string) => {
+    setParentState(newState);
     console.log(newState);
-    new_list.push({name:newState})
 
-  }
+    //check if the item exists in new_list
+    const isDuplicate = new_list.some((item) => item.name === newState);
 
-  /*useEffect(() => {
-    console.log(parentState);
-  }, [parentState]) */
+    // if does not exist already, add the new item
+    if (!isDuplicate) {
+      new_list.push({ name: newState });
+    } 
+  };
 
-  //new_list.push({name:parentState}) 
+  const handleDelete = (name: string) => {
+    setNewList(new_list.filter(item => item.name !== name));
+  };
 
-
-
-  //prop = properties/attributes
 
   return (
-    // <> </> = fragment - an array alternative 
     <> 
       <Header />
-      <hr></hr>
+      <hr />
       <EnterForm updateParentState={handleInput} />
-      <hr></hr>
+      <hr />
       <form id="checkboxList" action="">
-        {/** {} within here to show an object and that its not html */}
-        {new_list.map(({name, value}) => ( 
-          <div id="indivCheckbox"> 
-            <Checkbox key={name+value} name={name} value={value!}/> 
-          </div>)) }
+        {new_list.map(({ name, value }) => (
+          <div id="indivCheckbox" key={name}>
+            <Checkbox name={name} value={value!} /> 
+          </div>
+        ))}
       </form> 
       <Footer /> 
     </>
   );
 }
-

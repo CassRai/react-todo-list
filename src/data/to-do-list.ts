@@ -3,6 +3,7 @@ export interface ToDoListItem {
     name:string,
     value?:string,
     done?:boolean
+    onDelete: (name: string) => void;
 }
 
 export const my_list:ToDoListItem[] = [

@@ -50,9 +50,34 @@
 
 #indivCheckbox {
   padding: 0.4em;
+  display: flex; 
+  align-items: center; 
 }
 
 .strikeThroughCheckbox {
   text-decoration: line-through;
+  
 }
 
+.customCheckbox {
+  margin-right: 1em; 
+}
+
+.del_button {
+  border-radius: 8px;
+  border: 1px solid;
+  padding: 0.4em 0.6em;
+  font-size: 0.9em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color:cornflowerblue;
+  color: aliceblue;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+  margin-left: 0.5em;
+}
+
+.del_button:hover {
+  background-color:rgb(127, 165, 236);
+  box-shadow: 0 0 5px cornflowerblue, 0 0 10px cornflowerblue, 0 0 15px cornflowerblue;
+}
